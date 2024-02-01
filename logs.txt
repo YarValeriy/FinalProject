@@ -67,3 +67,8 @@
 [21:06:27] Addressbook has been loaded!
 [21:07:10] Contact Val has been removed!
 [21:07:10] Addressbook has been saved!
+[12:21:47] Addressbook has been loaded!
+[12:22:21] Contact val has been added.
+[12:22:21] Addressbook has been saved!
+[12:23:49] Contact val has been removed!
+[12:23:49] Addressbook has been saved!

@@ -4,7 +4,7 @@ from IO import *
 
 class Bot:
     def __init__(self, io):
-        self.book = AddressBook(io)
+        self.book = AddressBook()
         self.print = io.print
         self.input = io.input
 

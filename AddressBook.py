@@ -6,10 +6,9 @@ import os
 
 
 class AddressBook(UserList):
-    def __init__(self, io):
+    def __init__(self):
         self.data = []
         self.counter = -1
-        self.print = io.print
 
     def __str__(self):
         result = []
@@ -21,7 +20,7 @@ class AddressBook(UserList):
             if account["phones"]:
                 new_value = []
                 for phone in account["phones"]:
-                    self.print(phone)
+                    # print(phone)
                     if phone:
                         new_value.append(phone)
                 phone = ", ".join(new_value)
@@ -114,7 +113,7 @@ class AddressBook(UserList):
             elif account[category_new].lower().replace(" ", "") == pattern_new:
                 result.append(account)
         if not result:
-            self.print("There is no such contact in address book!")
+            print("There is no such contact in address book!")
         return result
 
     def edit(self, contact_name, parameter, new_value):
@@ -141,9 +140,9 @@ class AddressBook(UserList):
             if contact_name not in names:
                 raise NameError
         except ValueError:
-            self.print("Incorrect parameter! Please provide correct parameter")
+            print("Incorrect parameter! Please provide correct parameter")
         except NameError:
-            self.print("There is no such contact in address book!")
+            print("There is no such contact in address book!")
         else:
             self.log(f"Contact {contact_name} has been edited!")
             return True
